@@ -1,0 +1,3 @@
+@echo off
+echo Starting YazBot...
+npm start
