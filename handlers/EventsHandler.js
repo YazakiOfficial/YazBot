@@ -13,7 +13,7 @@
  * for better organization (e.g., events/relationship/, events/guild/).
  *
  * @module handlers/EventsHandler
- * @author faiz4sure
+ * @author Yazaki
  */
 
 import fs from "fs";
