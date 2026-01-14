@@ -14,6 +14,16 @@ This is a **selfbot** — it automates a **user account**, not a bot account cre
 This bot  exists **purely for version control / personal backup**.  
 Do **not** use this code to harass, spam, raid, mass-DM, token-grab, or break any laws / ToS.
 
+## INSTALATION
+---
+```
+git clone https://github.com/YazakiOfficial/YazBot.git
+
+nano config.yaml (edit to your desires)
+
+node index.js
+```
+
 ---
 
 ## Features Overview
