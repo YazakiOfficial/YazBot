@@ -37,6 +37,7 @@ git --version
 ```
 
 📱 Mobile (Android – Termux)
+```bash
 Step 1: Install Termux
 
 Install from F-Droid (NOT Play Store):
@@ -55,30 +56,58 @@ cd YazBot
 Step 5: Edit config
 nano config.yaml
 
-
 Save: CTRL + X → Y → Enter
 
 Step 6: Start the bot
 ./start.termux.sh
 
-
 or
 
 npm start
+```
 
-🐧 Linux (Ubuntu / Debian / Arch)
-Ubuntu / Debian
+🐧 Linux Distributions
+
+**Ubuntu / Debian**
+```bash
 sudo apt update
 sudo apt install git nodejs npm nano
 
-Arch Linux
-sudo pacman -S git nodejs npm nano
-
-Clone & run
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
 nano config.yaml
 ./start.sh
+```
+
+**Arch Linux**
+```bash
+sudo pacman -S git nodejs npm nano
+
+git clone https://github.com/YazakiOfficial/YazBot.git
+cd YazBot
+nano config.yaml
+./start.sh
+```
+
+**Fedora / RHEL / CentOS**
+```bash
+sudo dnf install git nodejs npm nano
+
+git clone https://github.com/YazakiOfficial/YazBot.git
+cd YazBot
+nano config.yaml
+./start.sh
+```
+
+**openSUSE**
+```bash
+sudo zypper install git nodejs20 npm nano
+
+git clone https://github.com/YazakiOfficial/YazBot.git
+cd YazBot
+nano config.yaml
+./start.sh
+```
 
 🖥️ Windows
 Step 1: Install dependencies
