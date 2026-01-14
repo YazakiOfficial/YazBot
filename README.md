@@ -1,281 +1,387 @@
-# YazBot
+# 🚀 YazBot
 
-**Personal Discord selfbot** written in [Python / JavaScript]
+> **Personal Discord selfbot** written in JavaScript
 
----
-
-## ⚠️ IMPORTANT WARNING – READ THIS FIRST ⚠️
-
-This is a **selfbot** — it automates a **user account**, not a bot account created via the Developer Portal.
-
-→ Selfbots are **explicitly against Discord's Terms of Service** (automation / client modification / API abuse)
-→ Using this **can and very likely will** result in permanent account termination
-→ Detection has become significantly more aggressive in 2025–2026
-→ **I am not responsible** for any bans, data loss, or consequences
-
-Use at your own risk — preferably only on **throwaway accounts**.
-
-This bot exists **purely for version control / personal backup / educational purposes**.
-Do **NOT** use this code to harass, spam, raid, mass-DM, token-grab, or break any laws / ToS.
+[![Node.js](https://img.shields.io/badge/Node.js-18+-339933?style=flat&logo=node.js)](https://nodejs.org/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-# 📦 Installation Guide
+## ⚠️ **CRITICAL WARNING - READ BEFORE USING**
 
-## Requirements
+### **This is a SELFBOT**
 
-You must have:
+This bot automates a **user account**, not a bot account from the Developer Portal.
 
-- **Node.js v18+** → https://nodejs.org
-- **Git** → https://git-scm.com
+### **LEGAL & SAFETY WARNINGS**
+- ❌ **Selfbots violate Discord's Terms of Service**
+- ❌ **High risk of permanent account termination**
+- ❌ **Advanced detection systems are active (2025-2026)**
+- ❌ **I am NOT responsible for bans, data loss, or consequences**
 
-Check if installed:
+**USE AT YOUR OWN RISK** - Only on throwaway accounts. This code is for educational purposes only.
+
+---
+
+## 📋 Table of Contents
+
+- [Features](#-features)
+- [Requirements](#-requirements)
+- [Installation](#-installation)
+  - [📱 Mobile (Termux)](#-mobile-termux)
+  - [🐧 Linux Distributions](#-linux-distributions)
+  - [🖥️ Windows](#️-windows)
+- [Configuration](#-configuration)
+- [Usage](#-usage)
+- [Commands & Permissions](#-commands--permissions)
+- [Troubleshooting](#-troubleshooting)
+- [Features Overview](#-features-overview)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Disclaimer](#-disclaimer)
+
+---
+
+## ✨ Features
+
+- 🤖 **AI Integration** - Chat with AI models
+- 🎮 **Fun Commands** - Entertainment and games
+- 🛠️ **Utility Tools** - General purpose helpers
+- 📷 **Media Processing** - Image/video manipulation
+- ⚙️ **Server Management** - Admin tools
+- 🎭 **Custom Status** - Rich presence control
+- 🎯 **Moderation** - Server moderation helpers
+- 🔒 **Security Features** - Owner-only controls
+
+---
+
+## 📋 Requirements
+
+### Minimum System Requirements
+- **Node.js v18.0+** ([Download](https://nodejs.org/))
+- **Git** ([Download](https://git-scm.com/))
+- **4GB RAM** (recommended)
+- **Stable internet connection**
+
+### Verify Installation
 ```bash
-node -v
-npm -v
-git --version
+node -v      # Should show v18.0 or higher
+npm -v       # Should show version number
+git --version # Should show version info
 ```
 
-📱 Mobile (Android – Termux)
+---
+
+## 📦 Installation
+
+### 📱 Mobile (Termux)
+
+**Step 1: Install Termux**
 ```bash
-Step 1: Install Termux
+# Install from F-Droid (NOT Google Play Store)
+# Download: https://f-droid.org/packages/com.termux/
+```
 
-Install from F-Droid (NOT Play Store):
-👉 https://f-droid.org/packages/com.termux/
+**Step 2: Update & Install Dependencies**
+```bash
+pkg update && pkg upgrade -y
+pkg install git nodejs nano -y
+```
 
-Step 2: Update packages
-pkg update && pkg upgrade
-
-Step 3: Install dependencies
-pkg install git nodejs nano
-
-Step 4: Clone the repository
+**Step 3: Clone Repository**
+```bash
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
-
-Step 5: Edit config
-nano config.yaml
-
-Save: CTRL + X → Y → Enter
-
-Step 6: Start the bot
-./start.termux.sh
-
-or
-
-npm start
 ```
 
-🐧 Linux Distributions
+**Step 4: First-Time Setup**
+```bash
+./start.termux.sh
+```
 
-**Ubuntu / Debian**
+**Step 5: Edit Configuration**
+```bash
+nano config.yaml
+# Add your Discord token and settings
+# Save: CTRL + X → Y → Enter
+```
+
+### 🐧 Linux Distributions
+
+#### Ubuntu / Debian
 ```bash
 sudo apt update
-sudo apt install git nodejs npm nano
+sudo apt install git nodejs npm nano -y
 
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
-nano config.yaml
 ./start.sh
+nano config.yaml
 ```
 
-**Arch Linux**
+#### Arch Linux
 ```bash
 sudo pacman -S git nodejs npm nano
 
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
-nano config.yaml
 ./start.sh
+nano config.yaml
 ```
 
-**Fedora / RHEL / CentOS**
+#### Fedora / RHEL / CentOS
 ```bash
 sudo dnf install git nodejs npm nano
 
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
-nano config.yaml
 ./start.sh
+nano config.yaml
 ```
 
-**openSUSE**
+#### openSUSE
 ```bash
 sudo zypper install git nodejs20 npm nano
 
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
-nano config.yaml
 ./start.sh
+nano config.yaml
 ```
 
-🖥️ Windows
-Step 1: Install dependencies
+### 🖥️ Windows
 
-Node.js → https://nodejs.org
+**Step 1: Install Dependencies**
+- Download Node.js v18+: https://nodejs.org/
+- Download Git: https://git-scm.com/
+- **Restart your PC** after installation
 
-Git → https://git-scm.com
-
-Restart your PC after installing.
-
-Step 2: Clone the bot
-
-Open Command Prompt:
-
+**Step 2: Clone Repository**
+```batch
 git clone https://github.com/YazakiOfficial/YazBot.git
 cd YazBot
+```
 
-Step 3: Edit config
-
-Open config.yaml with Notepad or VS Code.
-
-Step 4: FIRST TIME SETUP (IMPORTANT)
-
-⚠️ You MUST run start.bat before starting the bot manually.
-
-Double-click:
-
-start.bat
-
-
-This installs all required dependencies.
-
-Step 5: Start the bot
-
-After first setup, use:
-
-npm start
-
-
-or
-
-node index.js
-
-🚀 Quick Start Scripts (After Setup)
-
-After running the initial setup scripts above, you can use these simple scripts to start the bot:
-
-**Windows:**
+**Step 3: First-Time Setup**
 ```batch
-run.bat
+# Double-click start.bat or run:
+start.bat
 ```
 
-**Linux:**
-```bash
-./run.sh
+**Step 4: Edit Configuration**
+```batch
+# Open config.yaml with Notepad or VS Code
+# Add your Discord token and settings
 ```
 
-**Termux/Android:**
-```bash
-./run.termux.sh
-```
+---
 
-These scripts simply run `npm start` and assume Node.js and dependencies are already installed.
+## ⚙️ Configuration
 
-🔐 Command Access & Permissions
-Owner Access
+After installation, edit `config.yaml`:
 
-In config.yaml, add your Discord ID:
+```yaml
+# Your Discord user token (REQUIRED)
+token: "YOUR_DISCORD_TOKEN_HERE"
 
+# Bot prefix (default: !)
+prefix: "!"
+
+# Owner IDs (your Discord user ID)
 owners:
-  - "YOUR_DISCORD_ID"
+  - "123456789012345678"
 
-
-Owners can use:
-
-Dev commands
-
-Admin commands
-
-Dangerous commands
-
-Reload / Shutdown / Eval
-
-Admin Roles
+# Admin role IDs
 adminRoles:
-  - "ROLE_ID"
+  - "123456789012345678"
 
+# Other settings...
+```
 
-Admins can use:
+### 🔑 Getting Your Discord Token
+1. Press `CTRL + SHIFT + I` in Discord (Desktop)
+2. Go to **Application** tab
+3. Expand **Local Storage** → `https://discord.com`
+4. Find `token` under Key/Value pairs
+5. Copy the value (without quotes)
 
-Moderation commands
+### 🆔 Getting Discord IDs
+1. Enable Developer Mode: User Settings → Advanced → Developer Mode
+2. Right-click users/roles/channels → Copy ID
 
-Server tools
+---
 
-Settings
+## 🚀 Usage
 
-Discord Permission Checks
+### Starting the Bot
 
-Some commands require Discord permissions:
+**After initial setup, use these quick commands:**
 
-Action	Required Permission
-Ban	Ban Members
-Kick	Kick Members
-Clear	Manage Messages
-Roles	Manage Roles
-How to Get Your Discord ID
+| Platform | Command |
+|----------|---------|
+| Windows | `run.bat` |
+| Linux | `./run.sh` |
+| Termux | `./run.termux.sh` |
 
-Enable Developer Mode:
+**Or manually:**
+```bash
+npm start
+```
 
-Discord → Settings → Advanced → Developer Mode
+### Basic Commands
+```bash
+!help          # Show available commands
+!ping          # Check bot latency
+!status        # Show bot status
+```
 
-Then:
+---
 
-Right-click your user → Copy ID
+## 🔐 Commands & Permissions
 
-Right-click a role → Copy ID
+### 👑 Owner Commands
+Owners have full access to all features:
+- **Dev Commands**: `eval`, `reload`, `shutdown`
+- **Admin Commands**: Server management, dangerous operations
+- **All Features**: Unlimited access
 
-Right-click a channel → Copy ID
+### 👮 Admin Commands
+Users with admin roles can use:
+- **Moderation**: Ban, kick, mute, clear messages
+- **Server Tools**: Role management, channel tools
+- **Settings**: Configure bot settings
 
-Command List
+### 👥 Regular Commands
+Available to all users (may require permissions):
+- **General**: Utility commands
+- **Fun**: Entertainment features
+- **Media**: Image/video processing
+- **Status**: Custom presence
 
-Use:
+### 📋 Permission Requirements
 
-!help
+| Command Type | Required Discord Permission |
+|-------------|----------------------------|
+| Ban Users | Ban Members |
+| Kick Users | Kick Members |
+| Clear Messages | Manage Messages |
+| Manage Roles | Manage Roles |
+| Manage Channels | Manage Channels |
 
+---
 
-or
+## 🛠️ Troubleshooting
 
-/help
+### Common Issues
 
-
-(depends on your prefix)
-
-🛠️ Troubleshooting
-Missing packages
+**❌ "npm install" fails**
+```bash
+# Clear npm cache and retry
+npm cache clean --force
 npm install
+```
 
-Node version too old
-node -v
+**❌ Node.js version too old**
+```bash
+node -v  # Check version
+# Update Node.js to v18+ from nodejs.org
+```
 
+**❌ Commands not working**
+- ✅ Verify you're listed as owner in config.yaml
+- ✅ Check command prefix is correct
+- ✅ Restart bot after config changes
+- ✅ Check console for error messages
 
-Update if below v18.
+**❌ "Token invalid" error**
+- ✅ Get fresh token (tokens expire)
+- ✅ Don't share your token with anyone
+- ✅ Use incognito mode when getting token
 
-Commands not working
+**❌ Permission errors**
+- ✅ Bot needs appropriate Discord permissions
+- ✅ Check role hierarchy
+- ✅ Verify admin roles in config
 
-Make sure:
+### Getting Help
+- Check console output for detailed error messages
+- Verify all dependencies are installed
+- Ensure config.yaml is properly formatted
+- Test with basic commands first
 
-You are listed as owner
+---
 
-Prefix is correct
+## 📁 Features Overview
 
-Bot was restarted after config changes
+YazBot uses a modular command system organized by categories:
 
-Features Overview
+| Category | Description | Commands |
+|----------|-------------|----------|
+| **🤖 AI** | AI chat and generation | `chat`, `imagine`, `analyze` |
+| **🎮 Fun** | Entertainment & games | `meme`, `joke`, `game` |
+| **🛠️ General** | Utility tools | `ping`, `info`, `calc` |
+| **📷 Media** | Image/video processing | `resize`, `convert`, `filter` |
+| **🔧 Misc** | Miscellaneous tools | `remind`, `poll`, `weather` |
+| **⚡ Moderation** | Server moderation | `ban`, `kick`, `mute` |
+| **🔞 NSFW** | Adult content (18+) | `nsfw` commands |
+| **🏠 Server** | Server utilities | `role`, `channel`, `emoji` |
+| **⚙️ Settings** | Configuration | `prefix`, `toggle`, `config` |
+| **🎭 Status** | Rich presence | `status`, `activity`, `playing` |
+| **😈 Troll** | Prank commands | `troll` commands |
+| **🧪 Beta** | Experimental features | `beta` commands |
 
-YazBot is organized into modular command categories.
+---
 
-Folder	Purpose / Description
-AI	AI-related commands (chat, generation, analysis…)
-beta	Experimental / unstable / WIP features
-fun	Light-hearted entertainment
-general	Utility commands
-media	Image/video/GIF tools
-misc	Miscellaneous tools
-moderation	Moderation helpers (dangerous)
-nsfw	Adult-only commands (18+)
-server	Server utilities
-settings	Configuration & toggles
-status	Status / presence tools
-troll	Prank commands (use ethically)
+## 🤝 Contributing
 
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature-name`
+3. **Commit** changes: `git commit -m "Add feature"`
+4. **Push** to branch: `git push origin feature-name`
+5. **Submit** a Pull Request
+
+### Development Setup
+```bash
+git clone https://github.com/YazakiOfficial/YazBot.git
+cd YazBot
+npm install
+cp config.example.yaml config.yaml
+# Edit config.yaml with your settings
+npm run dev  # Development mode
+```
+
+### Guidelines
+- Follow existing code style
+- Add comments for complex logic
+- Test thoroughly before submitting
+- Respect Discord's Terms of Service
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## ⚠️ Final Disclaimer
+
+**By using YazBot, you acknowledge and accept:**
+
+1. **Selfbots violate Discord's Terms of Service**
+2. **High risk of account suspension or termination**
+3. **No warranty or support provided**
+4. **Use at your own risk and responsibility**
+5. **Developer is not liable for any consequences**
+
+**Remember:** This project exists for educational purposes only. Use responsibly and ethically.
+
+---
+
+<div align="center">
+
+**Made with ❤️ for the Discord community**
+
+[⭐ Star this repo](https://github.com/YazakiOfficial/YazBot) • [🐛 Report issues](https://github.com/YazakiOfficial/YazBot/issues) • [💬 Join discussions](https://github.com/YazakiOfficial/YazBot/discussions)
+
+</div>
