@@ -1,0 +1,20 @@
+2026-01-14T00:50:58.438Z [ERROR] Error loading command file userinfo.js: Invalid or unexpected token
+
+2026-01-14T00:50:58.478Z [ERROR] Error loading command file userinfo.js: Invalid or unexpected token
+
+2026-01-14T01:50:30.376Z [ERROR] Warning: Passing "color" to RoleManager#create() is deprecated. Use "colors" instead.
+Warning: Passing "color" to RoleManager#create() is deprecated. Use "colors" instead.
+    at RoleManager.create (/data/data/com.termux/files/home/YazBot/node_modules/discord.js-selfbot-v13/src/managers/RoleManager.js:211:17)
+    at file:///data/data/com.termux/files/home/YazBot/commands/server/clone.js:633:56
+    at wrappedTask (file:///data/data/com.termux/files/home/YazBot/utils/RateLimitManager.js:118:32)
+    at file:///data/data/com.termux/files/home/YazBot/utils/RateLimitManager.js:194:9
+    at new Promise (<anonymous>)
+    at RateLimitManager.execute (file:///data/data/com.termux/files/home/YazBot/utils/RateLimitManager.js:90:12)
+    at cloneRoles (file:///data/data/com.termux/files/home/YazBot/commands/server/clone.js:604:27)
+    at Object.execute (file:///data/data/com.termux/files/home/YazBot/commands/server/clone.js:140:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async Client.<anonymous> (file:///data/data/com.termux/files/home/YazBot/handlers/CommandHandler.js:218:9)
+
+2026-01-14T01:56:30.514Z [ERROR] Error creating category: Invalid Form Body
+name: Could not interpret "{'name': 'info', 'type': 'GUILD_CATEGORY'}" as string.
+

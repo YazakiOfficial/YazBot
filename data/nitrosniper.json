@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "webhookUrl": "",
+  "notifyInvalid": false,
+  "notifyAlreadyRedeemed": true,
+  "checkFakeGifts": true,
+  "cooldown": 5000,
+  "lastAttempt": 1768324994924,
+  "stats": {
+    "total": 2,
+    "invalid": 0,
+    "alreadyRedeemed": 0,
+    "ratelimited": 0,
+    "success": 0
+  }
+}
